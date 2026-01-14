@@ -2,6 +2,7 @@
 #include <string>
 
 #include "move.h"
+#include "gobblet.h"
 
 Move::Move (std::string rw, std::string col) : row(rw), column(col) {}
 
@@ -19,4 +20,12 @@ void Move::setRow(std::string rw) {
 
 void Move::setColumn(std::string colm) {
     column = colm;
+}
+
+void Move::place() {
+    
+}
+
+void Move::shift(std::string rw, std::string colm) {
+
 }

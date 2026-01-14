@@ -4,7 +4,7 @@
 #include "gobblet.h"
 
 
-Gobblet::Gobblet (std::string col, std::string sz, std::string stat) : color(col), size(sz), status(stat) {}
+Gobblet::Gobblet (std::string col, std::string sz, std::string stat, std::string pos) : color(col), size(sz), status(stat), position(pos) {}
 
 std::string Gobblet::getColor() const {
     return color;
@@ -14,8 +14,19 @@ std::string Gobblet::getSize() const {
     return size;
 }
 
+int Gobblet::getNumericSize() const {
+    if(size == "S") return 1;
+    if(size == "M") return 2;
+    if(size == "L") return 3;
+    return 0;
+}
+
 std::string Gobblet::getStatus() const {
     return status;
+}
+
+std::string Gobblet::getPosition() const {
+    return position;
 }
 
 void Gobblet::setColor(std::string col) {
@@ -28,4 +39,8 @@ void Gobblet::setSize(std::string sz) {
 
 void Gobblet::setStatus(std::string stat) {
     status = stat;
+}
+
+void Gobblet::setPosition(std::string pos) {
+    position = pos;
 }

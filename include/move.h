@@ -3,10 +3,13 @@
 
 #include <string>
 
+#include "gobblet.h"
+#include "player.h"
+
 class Move {
     protected:
-        std::string row;
-        std::string column;
+        std::string row; // 1 2 3
+        std::string column; // A B C
 
     public:
         Move(std::string rw, std::string colm);
@@ -16,6 +19,9 @@ class Move {
 
         void setRow(std::string rw);
         void setColumn(std::string colm);
+
+        void place();
+        void shift(std::string rw, std::string colm);
 };
 
-#endif MOVE_H
+#endif
