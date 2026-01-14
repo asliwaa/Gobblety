@@ -15,6 +15,8 @@ class Game {
         bool getGamestatus() const;
         void setGamestatus(bool gs);
 
+        void clearScreen();
+
         void runGame();
 
 };

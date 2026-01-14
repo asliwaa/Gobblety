@@ -20,10 +20,9 @@ class Player {
         void printArsenal();
         
         Gobblet getGobbletFromArsenal(std::string sz);
-
         void returnGobbletToArsenal(Gobblet g);
-        
 
+        bool hasGobbletsInArsenal();
 };
 
 #endif

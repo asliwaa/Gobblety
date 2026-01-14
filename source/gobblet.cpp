@@ -14,6 +14,7 @@ std::string Gobblet::getSize() const {
     return size;
 }
 
+//Converts size from string to int, used for size comparison
 int Gobblet::getNumericSize() const {
     if(size == "S") return 1;
     if(size == "M") return 2;
