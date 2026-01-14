@@ -48,3 +48,12 @@ Gobblet Player::getGobbletFromArsenal(std::string sz) {
 
     return Gobblet("NONE", "ERROR", "e", "");
 }
+
+void Player::returnGobbletToArsenal(Gobblet g) {
+    for (auto& existingGobblet : arsenal) {
+        if (existingGobblet.getSize() == g.getSize() && existingGobblet.getStatus() == "b") {
+            existingGobblet.setStatus("a");
+            return;
+        }
+    }
+}

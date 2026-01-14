@@ -21,6 +21,9 @@ class Player {
         
         Gobblet getGobbletFromArsenal(std::string sz);
 
+        void returnGobbletToArsenal(Gobblet g);
+        
+
 };
 
 #endif

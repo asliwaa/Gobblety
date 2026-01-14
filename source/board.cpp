@@ -26,7 +26,7 @@ void Board::drawBoard() {
 bool Board::placeGobblet(Gobblet g, int r, int c) {
     //Check if position is in range
     if( r < 0 || r > 2 || c < 0 || c > 2) {
-        std::cout << "Position out of range";
+        std::cout << "Position out of range\n";
         return false;
     }
 

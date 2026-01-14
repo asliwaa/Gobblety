@@ -21,8 +21,6 @@ public:
     std::string getStatus() const;
     std::string getPosition() const;
 
-    
-
     void setColor(std::string col);
     void setSize(std::string sz);
     void setStatus(std::string stat);
