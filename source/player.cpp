@@ -3,7 +3,7 @@
 
 #include "player.h"
 
-#define BLUE    "\033[1;34m"
+#define BLUE "\033[38;5;27m"
 #define ORANGE  "\033[38;5;208m"
 #define RESET   "\033[0m"
 
