@@ -36,7 +36,6 @@ void Board::drawBoard() {
 bool Board::placeGobblet(Gobblet g, int r, int c) {
     //Check if position is in range
     if( r < 0 || r > 2 || c < 0 || c > 2) {
-        std::cout << "Position out of range\n";
         return false;
     }
 
@@ -63,13 +62,11 @@ bool Board::placeGobblet(Gobblet g, int r, int c) {
 bool Board::moveGobblet(int fromR, int fromC, int toR, int toC, std::string pcol) {
     //Validate moved gobblets coordinates
     if (fromR < 0 || fromR > 2 || fromC < 0 || fromC > 2) {
-        std::cout << "Invalid 'from' position!\n";
         return false;
     }
 
     //Checks if given position isn't empty
     if (grid[fromR][fromC].empty()) {
-        std::cout << "This position is empty!\n";
         return false;
     }
 
@@ -77,7 +74,6 @@ bool Board::moveGobblet(int fromR, int fromC, int toR, int toC, std::string pcol
     Gobblet& candidate = grid[fromR][fromC].back();
 
     if (candidate.getColor() != pcol) {
-        std::cout << "That's not your gobblet!\n";
         return false;
     }
 

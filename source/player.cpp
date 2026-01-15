@@ -9,14 +9,14 @@
 
 //Constructor, sets players color and fills their arsenal
 Player::Player (std::string pcol) : p_color(pcol) {
-    arsenal.push_back(Gobblet(pcol, "S", "a", ""));
-    arsenal.push_back(Gobblet(pcol, "S", "a", ""));
+    arsenal.push_back(Gobblet(pcol, "S", "a"));
+    arsenal.push_back(Gobblet(pcol, "S", "a"));
 
-    arsenal.push_back(Gobblet(pcol, "M", "a", ""));
-    arsenal.push_back(Gobblet(pcol, "M", "a", ""));
+    arsenal.push_back(Gobblet(pcol, "M", "a"));
+    arsenal.push_back(Gobblet(pcol, "M", "a"));
 
-    arsenal.push_back(Gobblet(pcol, "L", "a", ""));
-    arsenal.push_back(Gobblet(pcol, "L", "a", ""));
+    arsenal.push_back(Gobblet(pcol, "L", "a"));
+    arsenal.push_back(Gobblet(pcol, "L", "a"));
 }
 
 std::string Player::getPlayerColor() const{
@@ -62,7 +62,7 @@ Gobblet Player::getGobbletFromArsenal(std::string sz) {
         }
     }
 
-    return Gobblet("NONE", "ERROR", "e", "");
+    return Gobblet("NONE", "ERROR", "e");
 }
 
 //Returns gobblet to arsenal after failed placement/move attempt
